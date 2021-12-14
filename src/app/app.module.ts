@@ -1,10 +1,8 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -47,14 +45,27 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { ZComponentComponent } from './components/z-component/z-component.component';
 import { ZDirectiveDirective } from './directives/z-directive.directive';
+import { HomeComponent } from './components/home/home.component';
+
+import { NotFoundComponent } from './components/error-pages/not-found/not-found.component';
+import { InternalServerComponent } from './components/error-pages/internal-server/internal-server.component';
+import { RegisterformComponent } from './components/registerform/registerform.component';
 
 @NgModule({
-  declarations: [AppComponent, ZComponentComponent, ZDirectiveDirective],
+  declarations: [
+    AppComponent,
+    ZComponentComponent,
+    ZDirectiveDirective,
+    HomeComponent,
+
+    NotFoundComponent,
+    InternalServerComponent,
+    RegisterformComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
@@ -94,5 +105,6 @@ import { ZDirectiveDirective } from './directives/z-directive.directive';
   ],
   providers: [],
   bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}
