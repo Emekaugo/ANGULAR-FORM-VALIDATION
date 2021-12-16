@@ -6,8 +6,8 @@ import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: '500', component: InternalServerComponent },
-  { path: '404', component: NotFoundComponent },
+  // { path: '500', component: InternalServerComponent },
+  // { path: '404', component: NotFoundComponent },
   // { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', redirectTo: '/404', pathMatch: 'full' },
 ];
